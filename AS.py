@@ -30,17 +30,17 @@ def main():
             img = article.top_image
             st.image(img)
 
-            #title = article.title
-            #st.subheader(title)
+            title = article.title
+            st.subheader(title)
 
             #aurther = article.authors
             #st.write(",".join(aurther))
 
             article.nlp()
 
-            keywords = article.keywords
-            st.subheader('Keywords:')
-            st.write(', '.join(keywords))
+            #keywords = article.keywords
+            #st.subheader('Keywords:')
+            #st.write(', '.join(keywords))
 
             tab1, tab2= st.tabs(["Full Text", "Summary"])
             with tab1:
