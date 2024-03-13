@@ -36,7 +36,7 @@ def main():
             #aurther = article.authors
             #st.write(",".join(aurther))
 
-            article.nlp()
+            #article.nlp()
 
             #keywords = article.keywords
             #st.subheader('Keywords:')
