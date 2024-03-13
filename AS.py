@@ -33,14 +33,14 @@ def main():
             title = article.title
             st.subheader(title)
 
-            #aurther = article.authors
-            #st.write(",".join(aurther))
-
+            aurther = article.authors
+            st.write(",".join(aurther))
+            article.nlp()
             
 
-            #keywords = article.keywords
-            #st.subheader('Keywords:')
-            #st.write(', '.join(keywords))
+            keywords = article.keywords
+            st.subheader('Keywords:')
+            st.write(', '.join(keywords))
 
             tab1, tab2= st.tabs(["Full Text", "Summary"])
             with tab1:
@@ -51,7 +51,7 @@ def main():
             with tab2:
                 st.subheader('Summary')
                 
-                article.nlp()
+                
                 summary = article.summary
                 summary = summary.replace('Advertisement', '')
                 st.write(summary)
