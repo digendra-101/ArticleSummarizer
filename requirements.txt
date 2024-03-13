@@ -1,0 +1,3 @@
+nltk
+newspaper3k
+streamlit_extras
