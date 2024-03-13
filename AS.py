@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_extras.add_vertical_space import add_vertical_space
 import nltk
-import newspaper
+from newspaper import Article
 
 with st.sidebar:
     st.title("Article Summarizer")
@@ -22,7 +22,7 @@ def main():
     url = st.text_input("",placeholder="Upload Article URL Here")
     if url:
         try:
-            article = newspaper.Article(url)
+            article = Article(url)
 
             article.download()
             article.parse()
