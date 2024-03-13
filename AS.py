@@ -15,8 +15,21 @@ with st.sidebar:
 ''')
     add_vertical_space(5)
     st.write("Made with ❤️ By Digendre Gendre")
-    
+REQUIRED_CORPORA = [
+    'brown',  # Required for FastNPExtractor
+    'punkt',  # Required for WordTokenizer
+    'maxent_treebank_pos_tagger',  # Required for NLTKTagger
+    'movie_reviews',  # Required for NaiveBayesAnalyzer
+    'wordnet',  # Required for lemmatization and Wordnet
+    'stopwords'
+]    
 def main():
+    
+    for each in REQUIRED_CORPORA:
+        print(('Downloading "{0}"'.format(each)))
+        nltk.download(each)
+    print("Finished.")
+
     st.info("Copy URL of any Article and past it below to get summary of Article")
     st.header("Upload URL of your Article")
     url = st.text_input("",placeholder="Upload Article URL Here")
