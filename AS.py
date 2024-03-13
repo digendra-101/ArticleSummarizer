@@ -30,8 +30,8 @@ def main():
             img = article.top_image
             st.image(img)
 
-            title = article.title
-            st.subheader(title)
+            #title = article.title
+            #st.subheader(title)
 
             #aurther = article.authors
             #st.write(",".join(aurther))
