@@ -50,8 +50,9 @@ def main():
         
             with tab2:
                 st.subheader('Summary')
-                article.nlp()
-                summary = article.summary
+                
+                k=article.nlp()
+                summary = k.summary
                 summary = summary.replace('Advertisement', '')
                 st.write(summary)
             st.balloons()    
