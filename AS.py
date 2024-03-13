@@ -33,8 +33,8 @@ def main():
             title = article.title
             st.subheader(title)
 
-            aurther = article.authors
-            st.write(",".join(aurther))
+            #aurther = article.authors
+            #st.write(",".join(aurther))
 
             article.nlp()
 
