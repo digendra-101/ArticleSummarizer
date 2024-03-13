@@ -36,7 +36,7 @@ def main():
             #aurther = article.authors
             #st.write(",".join(aurther))
 
-            #article.nlp()
+            
 
             #keywords = article.keywords
             #st.subheader('Keywords:')
@@ -50,6 +50,7 @@ def main():
         
             with tab2:
                 st.subheader('Summary')
+                article.nlp()
                 summary = article.summary
                 summary = summary.replace('Advertisement', '')
                 st.write(summary)
