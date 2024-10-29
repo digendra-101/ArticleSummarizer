@@ -4,7 +4,7 @@ import nltk
 from newspaper import Article
 
 with st.sidebar:
-    st.title("Article Summarizer")
+    st.title("Article Summarizer.")
     st.markdown('''
         ## About:
         - this app takes Articles links to create summary about the article
